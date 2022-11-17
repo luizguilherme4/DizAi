@@ -10,9 +10,11 @@ export default function PostForm(props) {
     const [userName, setUserName] = useState('');
 
     function handleSubmit(event) {
-        event.preventDefault(); //previne o comportamento default do submit (recarregar página inteira)
+        //previne o comportamento default do submit (recarregar página inteira)
+        event.preventDefault();
+
         props.onSubmit({ history, userName })
-        
+
         setHistory('');
         setUserName('');
     }

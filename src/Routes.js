@@ -1,4 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
+
+//importando as páginas
 import Home from './pages/Home';
 import MostViewed from './pages/MostViewed';
 
