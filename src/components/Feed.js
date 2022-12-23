@@ -9,8 +9,8 @@ export default function Feed(props) {
         return (
             <div className='feed-status'>
                 <img src={emptyFolderIcon} alt="Empty folder" />
-                <h1>Não encontramos nada</h1>
-                <h2>
+                <h1 id='title-feed'>Não encontramos nada</h1>
+                <h2 id="subtitle-feed">
                     Parece que você e seus amigos não postaram nada. Comece a escrever uma nova história!
                 </h2>
             </div>
@@ -20,8 +20,8 @@ export default function Feed(props) {
     return (
         <>
             <header>
-                <h1>{props.title}</h1>
-                <h2>{props.subtitle}</h2>
+                <h1 id='title-mostview'>{props.title}</h1>
+                <h2 id='subtitle-mostview'>{props.subtitle}</h2>
             </header>
 
             <section className='feed'>
@@ -29,12 +29,13 @@ export default function Feed(props) {
                     <article key={post.id}>
                         <p>{post.content}</p>
                         <footer>
-                            <div className='user-details'>
-                                <img src={userIcon} alt='User' />
+                            <div className="user-details">
+                                <img src={userIcon} alt="User" />
                                 <strong>{post.userName}</strong>
                             </div>
-                            <div className='time'>
-                                <img src={clockIcon} alt='Clock' />
+
+                            <div className="time">
+                                <img src={clockIcon} alt="Clock" />
                                 <span>Publicado em {post.publishedAt.toLocaleDateString('pt-br')}</span>
                             </div>
                         </footer>

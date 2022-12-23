@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-.feed article + article {
+.feed article+article {
   margin-top: 24px;
 }
 
@@ -26,22 +26,22 @@
   justify-content: space-between;
 }
 
-.feed article footer .user-details {
+.feed footer .user-details {
   display: flex;
   align-items: center;
 }
 
-.feed article footer .user-details strong {
+.feed footer .user-details strong {
   font-size: 14px;
   margin-left: 16px;
 }
 
-.feed article footer .time {
+.feed footer .time {
   display: flex;
   align-items: center;
 }
 
-.feed article footer .time span {
+.feed footer .time span {
   color: var(--gray-500);
   font-size: 12px;
   margin-left: 8px;
@@ -69,4 +69,45 @@
   color: var(--gray-500);
   font-size: 16px;
   margin-top: 16px;
+}
+
+@media (max-width: 1023px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px
+  }
+
+  #title-feed,
+  #title-mostview {
+    font-size: 24px;
+  }
+
+  #subtitle-feed,
+  #subtitle-mostview {
+    max-width: 250px;
+  }
+
+  .feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .feed footer .user-details,
+  .feed footer .time {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .feed footer .user-details strong,
+  .feed footer .time span {
+    margin-left: 0;
+    text-align: center;
+  }
 }

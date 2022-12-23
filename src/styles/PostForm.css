@@ -14,14 +14,14 @@
   color: var(--gray-700);
 }
 
-.post-form > input {
+.post-form>input {
   width: 100%;
   border: none;
   padding: 8px 0 24px;
   outline: none;
 }
 
-.post-form > div {
+.post-form>div {
   border-top: 1px solid var(--gray-200);
   padding-top: 24px;
   display: flex;
@@ -29,14 +29,14 @@
   justify-content: space-between;
 }
 
-.post-form > div input {
+.post-form>div input {
   flex: 1;
   margin: 0 16px;
   border: none;
   outline: 0;
 }
 
-.post-form > div button {
+.post-form>div button {
   background-color: var(--primary);
   padding: 16px 32px;
   border: none;
@@ -49,20 +49,51 @@
   transition: background-color 0.2s ease-in;
 }
 
-.post-form > div button img {
+.post-form>div button img {
   margin-right: 16px;
 }
 
-.post-form > div button:hover {
+.post-form>div button:hover {
   background-color: var(--primary-light);
 }
 
-.post-form > div button:active,
-.post-form > div button:focus {
+.post-form>div button:active,
+.post-form>div button:focus {
   background-color: var(--primary-dark);
 }
 
-.post-form > div button:disabled {
+.post-form>div button:disabled {
   background-color: var(--gray-400);
   cursor: default;
+}
+
+.post-form .error-container {
+  border: 0;
+  padding: 16px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--danger);
+  background-color: var(--danger-light);
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.name-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .post-form {
+    width: 300px;
+  }
+
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px
+  }
 }

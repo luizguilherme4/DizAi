@@ -9,11 +9,9 @@ export default function App() {
         <div className="wrapper">
             <BrowserRouter>
                 <nav>
-                    {/* isso será convertido em uma tag a em um href */}
                     <Link to='/'>Meu feed</Link>
                     <Link to='/most-viewed'>Mais vistos</Link>
                 </nav>
-                {/* AppRoutes é onde definimos nossas rotas */}
                 <AppRoutes />
             </BrowserRouter>
         </div>

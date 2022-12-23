@@ -3,8 +3,8 @@ import Feed from "../components/Feed"
 export default function MostViewed() {
     const posts = [{
         id: Math.random(),
-        content: 'content',
-        userName: 'Luiz',
+        content: 'Olá! Esse é meu novo projeto React :)',
+        userName: 'Luiz Desenvolvedor Front-End',
         publishedAt: new Date(),
     }
 ];
